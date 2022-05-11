@@ -1,0 +1,33 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+.navbar1 {
+    display: flex;
+    background-color: white;
+    justify-content: space-between;
+    height: 64.4px;
+}
+
+/* .back {
+    background-color: #E5E5E5;
+} */
+
+.company {
+    margin-left: 56px;
+    margin-top: 17px;
+    margin-bottom: 15px;
+    font-size: 24px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+}
+.co
+.navbar1 img {
+    height: 45px;
+    margin-top: 13px;
+    margin-bottom: 15px;
+    margin-right: 13px;
+}

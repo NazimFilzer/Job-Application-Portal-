@@ -1,0 +1,153 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+.navbar1 {
+    display: flex;
+    background-color: white;
+    justify-content: space-between;
+    height: 64.4px;
+}
+
+.back {
+    background-color: #E5E5E5;
+}
+
+.company {
+    margin-left: 56px;
+    margin-top: 17px;
+    margin-bottom: 15px;
+    font-size: 24px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+}
+.co
+.navbar1 img {
+    height: 45px;
+    margin-top: 13px;
+    margin-bottom: 15px;
+    margin-right: 13px;
+}
+
+.heading-1 {
+    padding-top: 100px;
+    margin-bottom: 85px;
+}
+
+section {
+    height: 500px;
+    width: 70%;
+}
+
+.card {
+    border: 2px black solid !important;
+    z-index: 40;
+    align-items: center;
+    /* width: 300px !important; */
+}
+
+.btn {
+    border: 2px solid black !important;
+    margin-bottom: 15px;
+    margin-left: 10px;
+    margin-right: 10px;
+    width: 54%;
+}
+
+.whole img {
+    width: 100px;
+}
+
+.swiper-button-next {
+
+    right: 160px !important;
+    /* left: auto; */
+    top: 70% !important;
+}
+
+.swiper-button-prev {
+    /* top: 70% !important; */
+    /* left: 160px !important; */
+    left: 129px !important;
+}
+
+.swiper-pagination-bullets.swiper-pagination-horizontal {
+    bottom: 20px !important;
+    z-index: 0;
+}
+
+.hidden {
+    padding: 0 18px;
+    display: none;
+    overflow: hidden;
+    background-color: #f1f1f1;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+
+.whole {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container-2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #E5E5E5;
+
+}
+
+
+
+.outline {
+    background-color: #C4C4C4;
+    width: 65%;
+    padding-top: 51px;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+}
+
+.form-control {
+    width: 147% !important;
+}
+
+
+.heading-2 {
+    margin-top: 100px;
+    margin-bottom: 40px;
+}
+
+.hr {
+    margin: auto;
+    color: #000;
+    max-width: 50%;
+}
+
+footer {
+    background-color: #E5E5E5;
+}
+
+.icons {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.iconsize {
+    width: 30px;
+    margin-right: 10px;
+}
+
+.strip {
+    height: 59px;
+    background-color: white;
+}

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,6 +11,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700;800&display=swap" rel="stylesheet">
     {{!-- font --}}
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
         integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
@@ -19,7 +21,10 @@
     <link rel="stylesheet" href="/public/stylesheets/users.css">
     <title>User interface</title>
 </head>
+
 <body>
+
+
     <header>
         <nav class="navbar1">
             <div class="company">YESTACK CAREERS</div>
@@ -28,5 +33,81 @@
         </nav>
     </header>
 
+    <div class="hire">
+        <h1>WE'RE HIRING!</h1>
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQX7zQF5hiRiBtriEbyGngaI1l8a7a7hU2ezw&usqp=CAU"
+            alt="img">
+    </div>
+
+    <div class="main back ">
+        <center>
+            <h1 class="heading-1 ">Current Roles</h1>
+
+        </center>
+        <div class="whole">
+            <section>
+                <div class=" swiper mySwiper container">
+                    <div class="swiper-wrapper content mt-5">
+                        {{#each products}}
+                        <div class="swiper-slide card" id="cards" style="width: 18rem;">
+                            <img src="https://iconarchive.com/download/i48697/custom-icon-design/pretty-office-2/man.ico"
+                                alt="icon">
+                            <h2 class="title">{{this.name}}</h2>
+                            <h5>{{this.role}}</h5>
+                            <h5>{{this.company}}</h5>
+                            <button type="button" class="collapsible btn " id="btn">View Discription</button>
+                            <div class="hidden">
+                                <p> {{this.desc}} </p>
+                            </div>
+                            
+                            <button class="delete btn" id="btn">Apply now</button>
+
+                        </div>
+                        {{/each}}
+                    </div>
+                </div>
+                <div class="swiper-button-next" id="next"></div>
+                <div class="swiper-button-prev" id="prev"></div>
+                <div class="swiper-pagination" id="dots"></div>
+            </section>
+
+        </div>
+        <!-- Swiper JS -->
+        <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+        <!-- Initialize Swiper -->
+        <script>
+            var swiper = new Swiper(".mySwiper", {
+                slidesPerView: 3,
+                spaceBetween: 30,
+                slidesPerGroup: 3,
+                loop: true,
+                loopFillGroupWithBlank: true,
+                pagination: {
+                    el: ".swiper-pagination",
+                    clickable: true,
+                },
+                navigation: {
+                    nextEl: ".swiper-button-next",
+                    prevEl: ".swiper-button-prev",
+                },
+            });
+
+            var coll = document.getElementsByClassName("collapsible");
+            var i;
+
+            for (i = 0; i < coll.length; i++) {
+                coll[i].addEventListener("click", function () {
+                    this.classList.toggle("active");
+                    var content = this.nextElementSibling;
+                    if (content.style.display === "block") {
+                        content.style.display = "none";
+                    } else {
+                        content.style.display = "block";
+                    }
+                });
+            }
+        </script>
 </body>
+
 </html>

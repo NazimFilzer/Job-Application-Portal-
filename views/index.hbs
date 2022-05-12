@@ -60,27 +60,46 @@
                 <div class=" swiper mySwiper container">
                     <div class="swiper-wrapper content mt-5">
                         {{#each products}}
-                        <div class="swiper-slide card" style="width: 18rem;">
+                        <div class="swiper-slide card" id="cards" style="width: 18rem;">
                             <img src="https://iconarchive.com/download/i48697/custom-icon-design/pretty-office-2/man.ico"
                                 alt="icon">
                             <h2 class="title">{{this.name}}</h2>
-                            {{!-- <p>{{this.desc}}</p> --}}
                             <h5>{{this.role}}</h5>
-                            {{!-- <h5>{{this.name}}</h5> --}}
                             <h5>{{this.company}}</h5>
-                            <button type="button" class="collapsible btn ">View Discription</button>
+                            <button type="button" class="collapsible btn " id="btn">View Discription</button>
                             <div class="hidden">
                                 <p> {{this.desc}} </p>
                             </div>
-                            <button class="edit btn ">Edit Post</button>
-                            <button class="delete btn">Delete Post</button>
+                            {{!-- <a class="edit btn " id="btn" href="/admin/edit">Edit Post</a> --}}
+                            <div>
+                                <button type="button" class="btn" data-toggle="modal" data-target="#myModal"> Edit
+                                    Post</button>
+                                <div class="modal fade" id="myModal" style="z-index:  2000; ;">
+                                    <div class="modal-dialog modal-sm">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <hl>Title</hl>
+                                            </div>
+                                            <div class="modal-body">
+                                                This is body
+                                            </div>
+                                            <div class="modal-footer">
+                                                <input class="btn btn-default" value="Close">
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <button class="delete btn" id="btn">Delete Post</button>
+
                         </div>
                         {{/each}}
                     </div>
                 </div>
-                <div class="swiper-button-next"></div>
-                <div class="swiper-button-prev"></div>
-                <div class="swiper-pagination"></div>
+                <div class="swiper-button-next" id="next"></div>
+                <div class="swiper-button-prev" id="prev"></div>
+                <div class="swiper-pagination" id="dots"></div>
             </section>
 
         </div>
@@ -94,7 +113,7 @@
                         <div class="row">
                             <label class="col-md-4" style="text-align:right"> Name of Role </label>
                             <div class="col-md-4">
-                                <input type="text" name="name" class="form-control" required
+                                <input type="text" name="name" class="form-control" id="control" required
                                     placeholder="Enter the Role">
                             </div>
                         </div>
@@ -115,7 +134,7 @@
                         <div class="row">
                             <label class="col-md-4" style="text-align:right"> Type of Role </label>
                             <div class="col-md-4">
-                                <input type="text" name="role" class="form-control" required
+                                <input type="text" name="role" class="form-control" id="control" required
                                     placeholder="Internship/FullTime" />
                             </div>
                         </div>
@@ -164,6 +183,8 @@
     </footer>
     <!-- Footer -->
 
+    {{!-- for modal --}}
+    <script src="js/bootstrap.js"></script>
 
     <!-- Swiper JS -->
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>

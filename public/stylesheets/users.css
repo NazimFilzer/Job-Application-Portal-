@@ -12,9 +12,9 @@
     height: 64.4px;
 }
 
-/* .back {
+.back {
     background-color: #E5E5E5;
-} */
+}
 
 .company {
     margin-left: 56px;
@@ -24,10 +24,94 @@
     font-family: 'Poppins', sans-serif;
     font-weight: 700;
 }
-.co
-.navbar1 img {
+
+.co .navbar1 img {
     height: 45px;
     margin-top: 13px;
     margin-bottom: 15px;
     margin-right: 13px;
+}
+
+.hire {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 65px;
+    background-color: #E5E5E5;
+    padding-bottom: 60px;
+}
+
+.heading-1 {
+    padding-top: 100px;
+    margin-bottom: 85px;
+}
+
+section {
+    height: 500px;
+    width: 70%;
+}
+
+#cards {
+    border: 2px black solid;
+    /* z-index: 40; */
+    align-items: center;
+}
+
+#btn {
+    border: 2px solid black;
+    margin-bottom: 15px;
+    margin-left: 10px;
+    margin-right: 10px;
+    width: 54%;
+}
+
+.whole img {
+    width: 100px;
+}
+
+#next {
+    top: 70%;
+    right: 160px;
+}
+
+#prev {
+    top: 70%;
+    left: 160px;
+}
+
+#dots {
+    bottom: 30px;
+    z-index: 0;
+}
+
+.hidden {
+    padding: 0 18px;
+    display: none;
+    overflow: hidden;
+    background-color: #f1f1f1;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+
+.whole {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+
+
+.outline {
+    background-color: #C4C4C4;
+    width: 65%;
+    padding-top: 51px;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
 }

@@ -14,12 +14,7 @@
 
     {{!-- This is for dropdown --}}
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js">
-    </script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js">
-    </script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js">
-    </script>
+
 
     <!-- CDN link used below is compatible with this example -->
     <link rel="stylesheet"
@@ -70,28 +65,80 @@
                             <div class="hidden">
                                 <p> {{this.desc}} </p>
                             </div>
-                            {{!-- <a class="edit btn " id="btn" href="/admin/edit">Edit Post</a> --}}
-                            <div>
-                                <button type="button" class="btn" data-toggle="modal" data-target="#myModal"> Edit
-                                    Post</button>
-                                <div class="modal fade" id="myModal" style="z-index:  2000; ;">
-                                    <div class="modal-dialog modal-sm">
-                                        <div class="modal-content">
-                                            <div class="modal-header">
-                                                <hl>Title</hl>
-                                            </div>
-                                            <div class="modal-body">
-                                                This is body
-                                            </div>
-                                            <div class="modal-footer">
-                                                <input class="btn btn-default" value="Close">
-                                            </div>
+                            <a class="edit btn " id="btn" href="/admin/edit/{{this._id}}">Edit Post</a>
+
+                            {{!--
+                            <!-- Button trigger modal -->
+                            <button type="button" class="btn" id="btn" data-toggle="modal" data-target="#exampleModal">
+                                Edit Post
+                            </button>
+                            <!-- Modal -->
+                            <div class="modal" id="exampleModal" tabindex="-1" role="dialog"
+                                aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                <div class="modal-dialog" role="document">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title" id="exampleModalLabel">Edit Content</h5>
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                <span aria-hidden="true">&times;</span>
+                                            </button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <form action=" ">
+                                                <div class="row">
+                                                    <label class="col-md-4" style="text-align:right"> Name of Role
+                                                    </label>
+                                                    <div class="col-md-4">
+                                                        <input type="text" name="name" class="form-control" id="control"
+                                                            required placeholder="Enter the Role">
+                                                    </div>
+                                                </div>
+                                                <br>
+                                                <div class="row">
+                                                    <label class="col-md-4" style="text-align:right"> Name of Company
+                                                    </label>
+                                                    <div class="col-md-4">
+                                                        <select class="selectpicker" data-style="btn-light"
+                                                            name="company" required>
+                                                            <option>Boring Bots</option>
+                                                            <option>Cine Tokens</option>
+                                                            <option>Finish Factory</option>
+                                                            <option>FreshNGood</option>
+                                                            <option>Project Mate</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                <br>
+                                                <div class="row">
+                                                    <label class="col-md-4" style="text-align:right"> Type of Role
+                                                    </label>
+                                                    <div class="col-md-4">
+                                                        <input type="text" name="role" class="form-control" id="control"
+                                                            required placeholder="Internship/FullTime" />
+                                                    </div>
+                                                </div>
+                                                <br>
+                                                <div class="row">
+                                                    <label class="col-md-4" style="text-align:right"> Description
+                                                    </label>
+                                                    <div class="col-md-4">
+                                                        <textarea name="desc" id="" cols="25" rows="10"
+                                                            required></textarea>
+                                                    </div>
+                                                </div>
+                                                <br>
+
+                                            </form>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary"
+                                                data-dismiss="modal">Close</button>
+                                            <button type="button" class="btn btn-primary">Save changes</button>
                                         </div>
                                     </div>
-
                                 </div>
-                            </div>
-                            <button class="delete btn" id="btn">Delete Post</button>
+                            </div> --}}
+                            <a href="/admin/{{this._id}}" class="delete btn" id="btn" onclick="return confirm('Do u wanna delete {{this.name}}')">Delete Post</a>
 
                         </div>
                         {{/each}}
@@ -121,7 +168,7 @@
                         <div class="row">
                             <label class="col-md-4" style="text-align:right"> Name of Company </label>
                             <div class="col-md-4">
-                                <select class="selectpicker" data-style="btn-light" name="company" required>
+                                <select class="" data-style="btn-light" name="company" required>
                                     <option>Boring Bots</option>
                                     <option>Cine Tokens</option>
                                     <option>Finish Factory</option>
@@ -183,9 +230,7 @@
     </footer>
     <!-- Footer -->
 
-    {{!-- for modal --}}
     <script src="js/bootstrap.js"></script>
-
     <!-- Swiper JS -->
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 
@@ -222,6 +267,16 @@
             });
         }
     </script>
+    <script src="js/bootstrap.js"></script>
+
+    {{!-- This is for dropdown --}}
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js">
+    </script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js">
+    </script>
+
 </body>
 
 </html>

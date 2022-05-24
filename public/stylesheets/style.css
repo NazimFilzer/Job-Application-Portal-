@@ -24,7 +24,7 @@
     font-family: 'Poppins', sans-serif;
     font-weight: 700;
 }
-.co
+
 .navbar1 img {
     height: 45px;
     margin-top: 13px;
@@ -72,6 +72,7 @@ section {
     z-index: 0;
 }
 
+/* The collapsible */
 .hidden {
     padding: 0 18px;
     display: none;
@@ -80,7 +81,9 @@ section {
     margin-left: 10px;
     margin-right: 10px;
     margin-bottom: 10px;
+    max-width: 95%;
 }
+/* The collapsible */
 
 .whole {
     display: flex;
@@ -143,4 +146,20 @@ footer {
 .strip {
     height: 59px;
     background-color: white;
+}
+
+.popup{
+    height: 500px;
+    z-index: 30000;
+}
+
+/* removing the Blur background */
+.modal-backdrop.show {
+    opacity: 0 !important;
+    display: none !important;
+}
+/* removing the Blur */
+
+select.selectpicker {
+    display: inline-block !important;
 }

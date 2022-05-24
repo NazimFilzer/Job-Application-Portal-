@@ -1,0 +1,12 @@
+.container{
+    margin: none;
+    padding: none;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #C4C4C4;
+    overflow: hidden;
+}
+

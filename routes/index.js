@@ -12,7 +12,7 @@ db.connect();
 
 
 router.get('/', (req,res)=>{
-  res.send("This is the root file");
+  res.render('landing', {style:"landing.css"});
 })
 /* Showing Detais on card. */
 router.get('/admin', async (req, res, next) => {
@@ -78,7 +78,6 @@ router.post("/login",async(req,res)=>{
       else  res.send("Wrong Password");
     })
   }
-
 })
 
 // signup page

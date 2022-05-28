@@ -9,6 +9,11 @@ var objectId = require('mongodb').ObjectId
 const db = require('../config/db-connect');
 db.connect();
 
+
+
+router.get('/', (req,res)=>{
+  res.send("This is the root file");
+})
 /* Showing Detais on card. */
 router.get('/admin', async (req, res, next) => {
   
@@ -84,8 +89,8 @@ router.post("/signup",async(req,res)=>{
   req.body.password=  await bcrypt.hash(req.body.password,10)
   db.get().collection("accounts").insertOne(req.body).then(()=>{
     console.log("Acc created");
-    res.send("Acc Created");
   })
+  res.send("Acc Created");
 })
 // signup page
 

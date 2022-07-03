@@ -1,8 +1,9 @@
+require('dotenv').config()
 const Mongoclient= require("mongodb").MongoClient
-const url="mongodb+srv://nazimfilzer:123@cluster0.cdask.mongodb.net/jobs";
 const dbname="jobs";
 let db=null;
-const client=new Mongoclient(url)
+// console.log(process.env)
+const client=new Mongoclient(process.env.URL)
 
 module.exports.connect=()=>{
     client.connect((err,data)=>{
